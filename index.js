@@ -2,7 +2,7 @@ let list = linkedList();
 list.append("Head!");
 list.append("Appended");
 list.prepend("New head");
-console.log(list.tail());
+console.log(list.at(3));
 
 function linkedList(){
     return{
@@ -49,6 +49,13 @@ function linkedList(){
         tail(){
             let currNode = this.head;
             while(currNode.next!==null){
+                currNode = currNode.next;
+            }
+            return currNode;
+        },
+        at(index){
+            let currNode = this.head;
+            for(let i=1; i<index; i++){
                 currNode = currNode.next;
             }
             return currNode;
