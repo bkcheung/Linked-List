@@ -1,7 +1,8 @@
 let list = linkedList();
 list.append("Head!");
-list.append("Two");
-// console.log(list.head());
+list.append("Appended");
+list.prepend("New head");
+console.log(list.head);
 
 function linkedList(){
     return{
@@ -9,28 +10,29 @@ function linkedList(){
         append(value){
             if(this.head.value === null){
                 this.head.setValue(value);
-                console.log(this.head);
             }
             else{
                 let currNode = this.head;
                 while(currNode.next!==null){
                     currNode = currNode.next;
-                    console.log(currNode);
                 }
                 let newNode = node();
                 newNode.setValue(value);
                 currNode.next = newNode;
-                console.log(currNode);
             }
         },
         prepend(value){
-            let newNode = node();
-            newNode.setValue(value);
-            //lost to add node to front of list
+            if(this.head.value === null){
+                this.head.setValue(value);
+                console.log(this.head);
+            }
+            else{
+                let newNode = node();
+                newNode.setValue(value);
+                newNode.setNext(this.head);
+                this.head = newNode;
+            }
         },
-        // head(){
-        //     console.log(this.head);
-        // }
     }
 }
 function node(){
@@ -39,6 +41,9 @@ function node(){
         next: null,
         setValue(value){
             return this.value = value;
+        },
+        setNext(node){
+            return this.next = node;
         }
     }
 }
