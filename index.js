@@ -2,7 +2,7 @@ let list = linkedList();
 list.append(1);
 list.append(2);
 list.prepend(3);
-console.log(list.contains(5));
+console.log(list.find(9));
 
 function linkedList(){
     return{
@@ -76,6 +76,19 @@ function linkedList(){
                 currNode = currNode.next;
             }
             return currNode.value === value;
+        },
+        find(value){
+            let currNode = this.head;
+            let index = 0;
+            while(currNode.value!==value && currNode.next!==null){
+                currNode = currNode.next;
+                index++;
+            }
+            if(currNode.value === value){
+                return index;
+            } else{
+                return "Error, value not found";
+            }
         }
     }
 }
