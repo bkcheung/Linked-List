@@ -2,7 +2,9 @@ let list = linkedList();
 list.append("Head!");
 list.append("Appended");
 list.prepend("New head");
-console.log(list.at(3));
+// console.log(list.at(3));
+list.pop();
+console.log(list.tail());
 
 function linkedList(){
     return{
@@ -59,6 +61,16 @@ function linkedList(){
                 currNode = currNode.next;
             }
             return currNode;
+        },
+        pop(){
+            let currNode = this.head;
+            let prevNode;
+            while(currNode.next!==null){
+                prevNode = currNode;
+                currNode = currNode.next;
+            }
+            currNode.value = null;
+            prevNode.next = null;
         }
     }
 }
