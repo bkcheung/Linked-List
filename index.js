@@ -4,6 +4,7 @@ list.append(2);
 list.prepend(0);
 list.append(3)
 list.insertAt("hello", 3);
+list.removeAt(4)
 console.log(list.toString());
 
 function linkedList(){
@@ -118,6 +119,22 @@ function linkedList(){
                 newNode.next = currNode;
                 prevNode.next = newNode;
             }
+        },
+        removeAt(index){
+            if(index===0){
+                this.head = this.head.next;
+            } else if(index >= this.size()){
+                this.pop();
+            } else {
+                let currNode = this.head;
+                let prevNode;
+                for(let i=0; i<index; i++){
+                    prevNode = currNode;
+                    currNode = currNode.next;
+                }
+                let nextNode = currNode.next;
+                prevNode.next = nextNode;
+            }   
         }
     }
 }
