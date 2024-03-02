@@ -2,7 +2,7 @@ let list = linkedList();
 list.append(1);
 list.append(2);
 list.prepend(3);
-console.log(list.find(9));
+console.log(list.toString());
 
 function linkedList(){
     return{
@@ -34,7 +34,6 @@ function linkedList(){
             }
         },
         size(){
-            //assumption: list will always have head, even if value is null
             let numNodes = 1; 
             let currNode = this.head;
             while(currNode.next!==null){
@@ -89,6 +88,16 @@ function linkedList(){
             } else{
                 return "Error, value not found";
             }
+        },
+        toString(){
+            let listString = "";
+            let currNode = this.head;
+            while(currNode.next!==null){
+                listString += `(${currNode.value}) -> `;
+                currNode = currNode.next;
+            }
+            listString += `(${currNode.value}) -> ${currNode.next}`;
+            return listString;
         }
     }
 }
