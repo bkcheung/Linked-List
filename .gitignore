@@ -1,4 +1,4 @@
-package-lock.json,
-package.json,
-.npmrc,
+package-lock.json
+package.json
+.npmrc
 github/
