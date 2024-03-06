@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bkcheung/Linked-List/issues"
   },
-  "homepage": "https://github.com/bkcheung/Linked-List#readme"
+  "homepage": "https://github.com/bkcheung/Linked-List#readme",
+  "publishConfig": {
+    "@bkcheung:registry": "https://npm.pkg.github.com"
+  }
 }
