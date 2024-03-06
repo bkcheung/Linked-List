@@ -1,12 +1,3 @@
-let list = linkedList();
-list.append(1);
-list.append(2);
-list.prepend(0);
-list.append(3)
-list.insertAt("hello", 3);
-list.removeAt(4)
-console.log(list.toString());
-
 function linkedList(){
     return{
         head: node(),
