@@ -141,3 +141,5 @@ function node(){
         }
     }
 }
+
+module.exports = linkedList;

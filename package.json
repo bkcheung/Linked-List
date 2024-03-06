@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bkcheung/Linked-List.git"
+    "url": "https://github.com/bkcheung/Linked-List.git"
   },
   "author": "Bonnie Cheung",
   "license": "ISC",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/bkcheung/Linked-List#readme",
   "publishConfig": {
-    "@bkcheung:registry": "https://npm.pkg.github.com"
+    "access": "public",
+    "@bkcheung:registry": "https://registry.npmjs.org"
   }
 }
