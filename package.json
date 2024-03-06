@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/bkcheung/Linked-List#readme",
   "publishConfig": {
-    "access": "public",
-    "@bkcheung:registry": "https://registry.npmjs.org"
+    "@bkcheung:registry": "https://npm.pkg.github.com"
   }
 }
